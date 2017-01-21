@@ -1,9 +1,5 @@
 window.addEventListener('load', function() {
 
-  var loginStatus = document.querySelector('.container h4')
-  var loginView = document.getElementById('login-view')
-  var homeView = document.getElementById('home-view')
-
   var webAuth = new auth0.WebAuth({
     domain: AUTH_CONFIG.domain,
     clientID: AUTH_CONFIG.clientID,
@@ -11,6 +7,10 @@ window.addEventListener('load', function() {
     audience: 'https://' + AUTH_CONFIG.domain + '/userinfo',
     responseType: 'token id_token'
   })
+
+  var loginStatus = document.querySelector('.container h4')
+  var loginView = document.getElementById('login-view')
+  var homeView = document.getElementById('home-view')
 
   // buttons and event listeners
   var homeViewBtn = document.getElementById('btn-home-view')
