@@ -1,0 +1,6 @@
+var AUTH_CONFIG = {
+  clientID: '',
+  domain: '',
+  callbackURL: location.href,
+  apiUrl: ''
+}
